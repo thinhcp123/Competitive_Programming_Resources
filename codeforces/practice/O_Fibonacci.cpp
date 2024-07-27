@@ -3,10 +3,19 @@
 using namespace std;
 using vi = vector<int>;
 
+int Fibonacci(int n)
+{
+    if (n < 2)
+    {
+        return n;
+    }
+    return (Fibonacci(n - 1) + Fibonacci(n - 2));
+}
 void solve()
 {
     int n;
     cin >> n;
+    cout << Fibonacci(n);
 }
 
 int main()
